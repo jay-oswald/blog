@@ -1,9 +1,3 @@
----
-template: home.html
-title: Material for MkDocs
-social:
-  cards_layout_options:
-    title: Documentation that simply works
----
+# Home
 
-Welcome to Material for MkDocs.
+Mainly just my long-winded answers to common questions on various Facebook groups. Decided I should write them down once, so I can post links instead of keeping to re-write them.
