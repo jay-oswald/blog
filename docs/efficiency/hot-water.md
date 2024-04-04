@@ -60,7 +60,7 @@ Lets go over the pros and Cons of each
 * Larger tank size, often not an issue, but is for some houses
 * Best to run once per day, with high ambient temp, hence the larger tank
 
-
+## System comparison
 So thats the basics of the 5 common ways to heat hot water. Overall Heat Pump always comes out as the winner in every situation I've looked at. But lets go through some common reasons people choose various other situations, why heat pumps are still a better choice.
 
 ### Instant gas never runs out of hot water
