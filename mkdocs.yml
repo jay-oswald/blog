@@ -23,3 +23,8 @@ theme:
     - content.code.copy
 
 plugins: []
+
+extra:
+  analytics:
+    provider: google
+    property: G-435344096
