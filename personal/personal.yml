@@ -17,3 +17,10 @@
         - ansible
         - fonts-firacode
         - google-chrome-stable
+        - git
+    - name: Jeff Geerling Docker Install
+      import_role:
+        name: geerlingguy.docker
+      become: true
+    - import_tasks: tasks/dotfiles.yml
+      tags: ['dotfiles']

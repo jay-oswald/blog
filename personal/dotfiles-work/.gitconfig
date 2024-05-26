@@ -1,0 +1,5 @@
+[user]
+	email = jayoswald@catalyst-au.net
+	name = Jay Oswald
+[core]
+	excludesfile = /home/jayoswald/.gitignore

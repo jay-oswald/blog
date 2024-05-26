@@ -1,0 +1,23 @@
+---
+- name: dotfiles-bashrc
+  ansible.builtin.copy:
+    src: ../dotfiles/.bashrc
+    dest: ~/.bashrc
+    mode: '0644'
+- name: dotfiles-gitignore
+  ansible.builtin.copy:
+    src: ../dotfiles/.gitignore
+    dest: ~/.gitignore
+    mode: '0644'
+- name: dotfiles-giticonfig-home
+  ansible.builtin.copy:
+    src: ../dotfiles/.gitconfig
+    dest: ~/.gitconfig
+    mode: '0644'
+  when: ansible_facts.distribution != "Ubuntu"
+- name: dotfiles-giticonfig-work
+  ansible.builtin.copy:
+    src: ../dotfiles-work/.gitconfig
+    dest: ~/.gitconfig
+    mode: '0644'
+  when: ansible_facts.distribution == "Ubuntu"

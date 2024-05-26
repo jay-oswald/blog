@@ -1,0 +1,5 @@
+[user]
+	email = jay@oswald.net.au
+	name = Jay Oswald
+[core]
+	excludesfile = /home/jay/.gitignore
