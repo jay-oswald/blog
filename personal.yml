@@ -1,0 +1,19 @@
+- name: Install/Upgrade Personal Computer
+  hosts: localhost
+  tasks:
+    # - name: Add Universe Repository (for fiera code)
+    #   ansible.builtin.apt_repository:
+    #     state: present
+    #     repo: universe
+    - name: Install/Upgrade apt
+      become: true
+      ansible.builtin.apt:
+        state: "latest"
+        update_cache: true
+        lock_timeout: 10
+        pkg:
+        - btop
+        - htop
+        - ansible
+        - fonts-firacode
+        - google-chrome-stable

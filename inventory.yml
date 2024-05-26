@@ -1,0 +1,6 @@
+pis:
+  hosts:
+    pi01:
+      ansible_host: 10.52.10.10
+    pi02:
+      ansible_host: 10.52.10.11

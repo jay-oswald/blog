@@ -1,0 +1,5 @@
+- name: Manage Pi Servers
+  hosts: pis
+  tasks:
+    - name: Ping
+      ansible.builtin.ping:
