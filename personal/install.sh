@@ -10,5 +10,6 @@ else
     sudo apt install ansible
     sudo apt upgrade ansible
     ansible-galaxy role install geerlingguy.docker
+    ansible-galaxy role install gantsign.visual-studio-code
     ansible-playbook personal.yml -K
 fi

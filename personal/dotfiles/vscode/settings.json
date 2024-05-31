@@ -1,0 +1,29 @@
+{
+    "php.suggest.basic": true,
+    "php.validate.enable": true,
+    "php.validate.run": "onType",
+    "intelephense.environment.phpVersion": "8.1.0",
+    "git.confirmSync": false,
+    "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontLigatures": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "gitlens.autolinks": [
+        {
+            "prefix": "WR",
+            "url": "https://wrms.catalyst.net.nz/wr.php?request_id=<num>"
+        },
+        {
+            "prefix": "WR-",
+            "url": "https://wrms.catalyst.net.nz/wr.php?request_id=<num>"
+        }
+    ],
+    "git.mergeEditor": true,
+    "merge-conflict.autoNavigateNextConflict.enabled": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "tabby.api.endpoint": "https://tabby.catalyst-au.net",
+    "phpcs.standard": "moodle",
+    "phpcs.ignorePatterns": [
+        "*/vendor/*"
+    ],
+    "phpcs.executablePath": "/home/jayoswald/.config/composer/vendor/squizlabs/php_codesniffer/bin/phpcs"
+}

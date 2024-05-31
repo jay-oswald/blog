@@ -24,3 +24,5 @@
       become: true
     - import_tasks: tasks/dotfiles.yml
       tags: ['dotfiles']
+    - import_tasks: tasks/vscode.yml
+      tags: ['vscode']

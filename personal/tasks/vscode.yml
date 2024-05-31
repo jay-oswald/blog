@@ -1,0 +1,66 @@
+---
+- name: vscode install
+  import_role:
+    name: gantsign.visual-studio-code
+- name: Install Global VsCode extensions
+  ansible.builtin.shell: code --install-extension {{ item }}
+  loop:
+    - alexdima.copy-relative-path
+    - bmewburn.vscode-intelephense-client
+    - claudiospizzi.scratch-manager
+    - moshfeu.compare-folders
+    - devsense.composer-php-vscode
+    - devsense.phptools-vscode
+    - devsense.profiler-php-vscode
+    - donjayamanne.githistory
+    - eamodio.gitlens
+    - everettjf.filter-line
+    - hookyqr.beautify
+    - johnbillion.vscode-wordpress-hooks
+    - keshan.markdown-live
+    - liximomo.sftp
+    - mehedidracula.php-namespace-resolver
+    - mgmcdermott.vscode-language-babel
+    - mikestead.dotenv
+    - mkloubert.vscode-deploy-reloaded
+    - ms-azuretools.vscode-docker
+    - p1c2u.docker-compose
+    - redhat.ansible
+    - redhat.vscode-yaml
+    - streetsidesoftware.code-spell-checker
+    - vitaliymaz.vscode-svg-previewer
+    - waderyan.gitblame
+    - wayou.vscode-todo-highlight
+    - xdebug.php-debug
+    - PKief.material-icon-theme
+- name: Install Work VsCode extensions
+  ansible.builtin.shell: code --install-extension {{ item }}
+  loop:
+    - TabbyML.vscode-tabby
+  when: ansible_facts.distribution == "Ubuntu"
+- name: Install Home VsCode extensions
+  ansible.builtin.shell: code --install-extension {{ item }}
+  loop:
+    - christian-kohler.npm-intellisense
+    - christian-kohler.path-intellisense
+    - dbaeumer.vscode-eslint
+    - esbenp.prettier-vscode
+    - formulahendry.auto-close-tag
+    - formulahendry.auto-complete-tag
+    - formulahendry.auto-rename-tag
+    - github.vscode-github-actions
+    - github.vscode-pull-request-github
+    - mrmlnc.vscode-scss
+    - naumovs.color-highlight
+    - octref.vetur
+  when: ansible_facts.distribution != "Ubuntu"
+- name: vscode-settings.json
+  ansible.builtin.copy:
+    src: ../dotfiles/vscode/settings.json
+    dest: ~/.config/Code/User/settings.json
+    mode: '0644'
+- name: vscode-keybindings.json
+  ansible.builtin.copy:
+    src: ../dotfiles/vscode/keybindings.json
+    dest: ~/.config/Code/User/keybindings.json
+    mode: '0644'
